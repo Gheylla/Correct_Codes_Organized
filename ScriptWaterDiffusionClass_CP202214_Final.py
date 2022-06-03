@@ -71,7 +71,7 @@ sPar = pd.Series(sPar)
 # Define top boundary condition function for Water Flux
 # =============================================================================
 bPar = {'qTop': -0.001,  # top flux
-        'WatBotCond': 'gravity', # Robin condition or Gravity condition
+        'WatBotCond': 'robins', # Robin condition or Gravity condition
         'BotRobResTerm': 0.005 * 86400,  # Robin resistance term for bottom was per second but needs to be per day
         'externalrobhead' : -1, # pressure head at lower boundary robins  
         }
