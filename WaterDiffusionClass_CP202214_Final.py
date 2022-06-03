@@ -159,7 +159,7 @@ class WaterDiffusion:
         t_span = [t[0],t[-1]]
         int_result = spi.solve_ivp(dYdt, t_span, hwIni.squeeze(), 
                                    t_eval=t, 
-                                   method='BDF', vectorized=True,  
+                                   method='BDF', vectorized=True, jac=jacFun,  
                                    rtol=1e-8)
         return int_result
 
